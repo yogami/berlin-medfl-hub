@@ -10,8 +10,8 @@ test.describe('Berlin MedFL Hub E2E Tests', () => {
         // Check for CTA button
         await expect(page.locator('a.btn-primary')).toBeVisible();
 
-        // Check for trusted partners section
-        await expect(page.locator('text=CHARITÉ')).toBeVisible();
+        // Check for trusted partners section using exact match
+        await expect(page.getByText('CHARITÉ', { exact: true })).toBeVisible();
     });
 
     test('Dashboard page loads and shows training status', async ({ page }) => {
@@ -20,11 +20,11 @@ test.describe('Berlin MedFL Hub E2E Tests', () => {
         // Check for dashboard header
         await expect(page.locator('text=MedFL')).toBeVisible();
 
-        // Check for round information
-        await expect(page.locator('text=Round')).toBeVisible();
+        // Check for round information using specific span
+        await expect(page.getByText('Round #42')).toBeVisible();
 
         // Check for at least one hospital card
-        await expect(page.locator('text=Charité')).toBeVisible();
+        await expect(page.getByText('Charité Berlin')).toBeVisible();
     });
 
     test('API returns hospital list', async ({ request }) => {

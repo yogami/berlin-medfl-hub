@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Suspense } from 'react';
 
 export default function Home() {
   return (
@@ -46,7 +45,7 @@ export default function Home() {
 
           {/* Stats / Trust */}
           <section style={{ padding: '4rem 0', textAlign: 'center', borderTop: '1px solid hsla(0,0%,100%,0.1)' }}>
-            <h2 style={{ fontSize: '2rem', marginBottom: '3rem' }}>Trusted by Berlin's Health Ecosystem</h2>
+            <h2 style={{ fontSize: '2rem', marginBottom: '3rem' }}>Trusted by Berlin&apos;s Health Ecosystem</h2>
             <div style={{ display: 'flex', justifyContent: 'space-around', opacity: 0.7 }}>
               <span>CHARITÉ</span>
               <span>BIH</span>
